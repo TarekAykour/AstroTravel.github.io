@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+<div class="messages">
+<h2>The Solar System</h2>
+<p class="alert">! Scale is inaccurate</p>
+</div>
+<div class="solarsystem">
+<div class="sun">
+    <div class="sun-diameter" value="{{sun['Name']}}" hidden>{{sun['diameter']}}</div>
+    <img class="sun-img" src="../static/images/{{sun['Name']}}.png" name="{{sun['Name']}}">
+</div>
+
+<div class="solarPlanets">
+{% for planet in solarplanets %}
+<div class="outline {{planet['Name']}}-outline" value="{{planet['Name']}}">
+    <div class="perihelion" value="{{planet['Name']}}" hidden>{{planet["perihelion"]}}</div>
+    <div class="diameter" value="{{planet['Name']}}" hidden >{{planet["diameter"]}}</div>
+    <div class="gravity" value="{{planet['Name']}}" hidden >{{planet["gravity"]}}</div>
+    <div class="moons" value="{{planet['Name']}}" hidden >{{planet["moons"]}}</div>
+    <img class="{{planet['Name']}}-img" src="../static/images/{{planet['Name']}}.png" name="{{planet['Name']}}">
+</div>
+{% endfor %}
+</div>
+
+
+</div>
+
+<div class="modal">
+    <i class="fa fa-times fa-3x"></i>
+    <img class="modalImage" src="" width="100px">
+    <h1 class="planetName"></h1>
+    <p class="planetInfo"></p>
+    <div class="modal-info">
+        <h3 style="color:black;">Info:</h3>
+        <p class="distance"></p>
+        <p class="gravityDisplay"></p>
+        <p class="moonsDisplay"></p>
+    </div>
+    <a href="/">Travel to</a>
+</div>
+
+
+<script type="text/javascript" src="../static/solar.js"></script>
+<script type="text/javascript" src="../static/Modal.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

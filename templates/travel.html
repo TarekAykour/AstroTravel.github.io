@@ -1,0 +1,75 @@
+{% extends "layout.html"%}
+
+{% block body %}
+
+
+<div class="introduction">
+
+<h2>Welcome to AstroTravel!</h2>
+<h4>You can select the departure and destination, followed by the type of vehicle you're travelling with and we'll calculate the travel time</h4>
+<h3 style="color:white;">Current date: {{time}}</h3>
+</div>
+
+
+<form method="post">
+<h2>Departure:</h2>
+<select name="departure" class="departure">
+<option disabled selected>select planet</option>
+{% for planet in planets %}
+{% if planet["isPlanet"] == True %}
+<option value="{{planet['englishName']}}">{{planet["englishName"]}}</option>
+{% endif %}
+{% endfor %}
+</select>
+
+
+<h2>Destination:</h2>
+<select name="destination" class="destination">
+<option disabled selected>select planet</option>
+{% for planet in planets %}
+    {% if planet["isPlanet"] == True %}
+        <option value="{{planet['englishName']}}">{{planet["englishName"]}}</option>
+    {% endif %}
+{% endfor %}
+</select>
+
+<h2>Select vehicle:</h2>
+<div class="dropdown">
+<!-- <button type="button" onclick="dropMenu()" class="dropbtn">Select <i class="fa fa-angle-down "></i></button> -->
+<select name="vehicleselect">
+    <option disabled selected>Select Vehicle</option>
+<!-- <div name="vehicleselect" class="dropdown-content" > -->
+{% for vehicle in vehicles %}
+<option>
+    <div class="vehicle-info" onclick="changeVal('{{vehicle['name']}} - {{vehicle['velocity']}}km/h')" name="{{vehicle['name']}}">
+        <img src="{{vehicle['image']}}" width="75px" height="75px">
+        <h3>{{vehicle['name']}} - <span>{{vehicle['velocity']}}km/h</span></h3>
+    </div>
+</option>
+{% endfor %}
+</select>
+<!-- </div> -->
+</div>
+
+
+<br><button type="submit" class="travelBtn" name="travelBtn">Travel!</button>
+
+</form>
+
+
+<div class="statistics">
+        <h2>{{departure}} - {{destination}}</h2>
+        <h3>Vehicle: {{chosenVehicle}} ({{speed}}km/h)</h3>
+        <h4>Distance: {{distance}}km</h4>
+        <h5>it will take {{travel_years}} years, {{months}} months, {{weeks}} weeks and {{days}} days.</h5>
+        <h2>ETA: {{eta}}</h2>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

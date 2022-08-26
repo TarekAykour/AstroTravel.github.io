@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="initial-scale=1", width="device-wdth">
+    <title>{%block title %} AstroTravel {% endblock %}</title>
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="stylesheet" href="./static/stars.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div id="stars"></div>
+<div id="stars2"></div>
+<div id="stars3"></div>
+  <nav>
+  <i class="fa fa-bars fa-3x"></i>
+  <nav class="navigation close">
+    <ul class="nav-links">
+      <li><a href="/">Travel</a></li>
+      <li><a href="/astrotravelplus">AstroTravel+</a></li>
+      <li><a href="/solarsystem">The Solar System</a></li>
+      <li><a href="/vehicleinfo">Vehicle info</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+  </nav>
+</nav>
+<audio class="audio"  hidden="true" autoplay loop src="../static/spacemusic.mp3"> </audio>
+    {% block body %}{% endblock %}
+
+    <div class="weather-section">
+    <h1>Weather</h1>
+    <div class="weather-container">
+    {% for planet in planets %}
+      {% for temperature in temperatures  %}
+        {% if temperature["Name"] == planet["englishName"] %}
+        <div class="weather {{planet['englishName']}}" onclick="nextSlide(1)" >
+          <img src="../static/images/{{planet['englishName']}}.png" width="100px">
+            <div class="text">
+            <h1 style="">{{planet["englishName"]}}</h1>
+            <h2>{{temperature["Temp"]}}°C /<br><span>{{temperature["TempF"]}}°F</span></h2>
+          </div>
+        </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </div>
+  </div>
+
+
+<script type="text/javascript" src="../static/script.js"></script>
+
+</body>
+</html>

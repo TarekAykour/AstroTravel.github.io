@@ -1,0 +1,153 @@
+* {font-family: "open sans";text-align: center;}.about {position: relative;top:-75%;color: white;max-width: 100%;margin-top: 75px;}.about h1 {position: relative;z-index:2;}.underline {height: 15px;width: 50%;background: #4287f5;position: absolute;top: 17.5%;left:25%;z-index: -1;}body {max-width: 100vw;height: 100%;overflow: auto;display: grid;grid-template-rows: 1fr 1fr 1fr 1fr;}.fa-bars {color: white;margin: 15px;cursor:pointer;position: absolute;right: 5px;z-index: 5;top:0;}.navigation {margin: 0;position: absolute;top:0;right:0;width: 100%;height: 100%;margin: auto;background: #333;transition: transform 300ms;height: 100%;z-index: 4;}.close {transform: translateY(-100%);transition: transform 300ms;}.nav-links {position: relative;top: 10%;right: 5%;margin-top: 50px;text-align: center;width: 75%;margin: auto;}.nav-links a {color: white;text-decoration: none;}.nav-links li {list-style:none;display: block;padding: 10px;font-weight: 300;border-bottom: solid 1px white;}h1,h2,h4 {color: white;}.introduction {margin-top: 25px;margin-bottom: 5%;}form {font-size: 18px;}h4 {font-weight: 300;}select {padding: 12px;width: 100%;font-size: 16px;text-align: center;font-weight: 300;cursor: pointer;}.departure {background: #ffe11c;border: none;}.destination {background: #7deb34;border: none;}.dropbtn {padding: 16px;width: 150px;font-size: 16px;width: 100%;cursor: pointer;border: none;text-align: center;line-height: 100%;}.fa {float: right;}.dropdown {position: relative;display: inline-block;width: 100%;}.dropdown-content {display: none;position: absolute;background-color: #f1f1f1;min-width: 160px;z-index: 1;max-height: 300px;}.vehicle-info {display: grid;grid-template-columns: .5fr 1fr;border-radius: 5px;width: 100%;cursor: pointer;transform: scale(1);transition: transform 300ms;margin-bottom: 125x;}.vehicle-info:hover {transform: scale(1.1);transition: transform 300ms;}.vehicle-info span {color:grey;}.show {display:block;}.travelBtn {padding: 10px;width: 200px;margin: 0 auto;display: block;margin-top: 5%;font-weight: 300;border: none;font-size: 16px;border-radius: 5px;background: #5d9afc;color: white;cursor:pointer;}.error {background: #ff765e;font-family: 'open sans';width: 100%;margin: auto;border-radius: 5px;line-height: 100px;color: #333;font-size: 24px;position: absolute;top:25%;left: 50%;transform: translate(-50%,-25%);}.error-return {display: block;width: 150px;padding: 12px;color: white;text-decoration: none;background: #3ae3fc;font-family: 'open sans';border-radius: 5px;}.statistics {color:white;font-family:'open sans';margin-top: 25px;border:solid 2px white;border-radius: 5px;}.weather-section {position: relative;width: 100%;}.weather {display:none;max-width: 450px;margin: auto;width: 100%;height: 200px;margin-top: 50px;border-radius: 5px;background: #fff;box-shadow: 1px 1px 5px black;top: 50%;transform: translateX(-100%);transition: transform 300ms;grid-template-columns: 1fr 1fr;}.weather-container {width: 100%;position: relative;margin: auto;}.weather img {filter: drop-shadow(0 0 0.75rem #333);;}.Uranus {background:#66aef2;}.Neptune {background: #697cfa;color: white;}.Jupiter {background: #ffcf40;}.Saturn {background:#ead6b8;}.Earth {background: #6b93d6;}.Mars {background: #ff7369;}.Mercury {background: #cfa780;}.Venus {background: #ffe7bf;}.Jupiter h1 {color: #333;}.Jupiter h2 {color: #333;}.Saturn h1 {color: #333;}.Saturn h2 {color: #333;}.Venus h1 {color: #333;}.Venus h2 {color: #333;}
+
+/* solar planets */
+
+.solarsystem {
+    height: 100%;
+    border: solid 1px red;
+    position: relative;
+    margin-bottom: 100%;
+    overflow: auto;
+}
+
+
+
+.alert {
+    position: relative;
+    background: #ff82a8;
+    color: #9c0331;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    left: -5px;
+}
+
+
+
+.sun {
+    position: relative;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    margin: auto;
+}
+
+
+/* ORBIT */
+.outline img {
+    position: relative;
+    width: 25%;
+    transform: translate(-50%,-50%);
+    pointer-events: auto;
+
+
+}
+
+.outline {
+    position: absolute;
+    top:25%;
+    left:15%;
+    transform: translate(-15%,-25%);
+    border-radius: 50%;
+    margin: 25px;
+    background: transparent;
+    pointer-events: none;
+
+
+}
+
+
+
+/* orbits */
+.Mercury-outline {
+  animation: orbit 4.4s linear infinite;
+}
+.Venus-outline {
+  animation: orbit 11.25s linear infinite;
+}
+.Earth-outline {
+  animation: orbit 18.25s linear infinite;
+}
+.Mars-outline {
+  animation: orbit 34.35s linear infinite;
+}
+.Jupiter-outline {
+  animation: orbit 40s linear infinite;
+}
+.Saturn-outline {
+  animation: orbit 60s linear infinite;
+
+}
+.Uranus-outline {
+  animation: orbit 84s linear infinite;
+  position: absolute;
+  top:10%;
+  left:5%;
+
+}
+.Neptune-outline {
+  position: absolute;
+  top:0%;
+  left:0%;
+  transform: translate(50%,50%);
+  animation: orbit 165s linear infinite;
+}
+
+/* modal of planet */
+.modal {
+  display: none;
+  position: absolute;
+  left:0;
+  top:0;
+  height: 100%;
+  width: 100%;
+  background: #ffff;
+  z-index: 6;
+  grid-template-rows: .1fr .1fr .5fr 1fr ;
+  overflow: auto;
+}
+
+.modal .fa-times {
+  position: absolute;
+  right: 0;
+  margin: 25px;
+  cursor:pointer;
+}
+
+.modal-info h3,p {
+  margin: 5px;
+  text-align: left;
+}
+.modal img {
+  margin: auto;
+}
+
+.planetInfo {
+  width: 75%;
+  margin:auto;
+  margin-bottom: 25px;
+}
+
+.modal a {
+  padding: 5px;
+  margin: 5px;
+  text-decoration: none;
+  background: #34a4eb;
+  color: white;
+  font-weight: 400;
+}
+.modal a:active {
+  transform: Scale(95%);
+  transition: transform 300ms;
+}
+
+/* animations */
+
+@keyframes orbit{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+}
