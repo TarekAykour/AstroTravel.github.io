@@ -6,14 +6,16 @@ from vehicles import vehicles
 import datetime
 
 
-# API
-planets = requests.get("https://api.le-systeme-solaire.net/rest/bodies/")
+
 
 
 
 # Configure application
 
 app = Flask(__name__)
+
+# API
+planets = requests.get("https://api.le-systeme-solaire.net/rest/bodies/")
 
 
 # configure session
