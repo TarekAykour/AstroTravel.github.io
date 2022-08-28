@@ -51,6 +51,27 @@ for(let i =0; i < planets.length; i++){
             else if(planets[i].style.width > 100){
                 planets[i].style.width = '100%';
             }
+            
+            
+              if(
+                planets[i].getAttribute('value') == 'Mercury' ||
+                planets[i].getAttribute('value') == 'Venus' ||
+                planets[i].getAttribute('value') == 'Earth' ||
+                planets[i].getAttribute('value') == 'Mars'
+                ){
+                    planets[i].style.height = `${25+ ((scale + (window.innerHeight/2)) ) /  50}%`;
+                    planets[i].style.width = `${50+ ((scale + (window.innerWidth/2)) ) /  50}%`;
+
+
+                }
+            if(planets[i].getAttribute('value') == 'Saturn'){
+                planets[i].style.height = `${25+ ((scale + (window.innerHeight/2)) ) /  35}%`;
+                planets[i].style.width = `${25+ ((scale + (window.innerWidth/2)) ) /  35}%`;
+            }
+            if(planets[i].getAttribute('value') == 'Jupiter'){
+                planets[i].style.height = `${25+ ((scale + (window.innerHeight/2)) ) /  20}%`;
+                planets[i].style.width = `${25+ ((scale + (window.innerWidth/2)) ) /  20}%`;
+            }
           
         }
     }
