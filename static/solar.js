@@ -54,36 +54,7 @@ for(let i =0; i < planets.length; i++){
             
             
             
-            
-             if(planets[i].getAttribute('value') == 'Mecury'){
-                planets[i].style.height = `${25+ ((scale + (window.innerHeight/2)) ) / 50}%`;
-                planets[i].style.width = `${25+ ((scale + (window.innerWidth/2)) ) /  50}%`;
-            }
-            
-             if(planets[i].getAttribute('value') == 'Venus'){
-                planets[i].style.height = `${25+ ((scale + (window.innerHeight/2)) ) / 45}%`;
-                planets[i].style.width = `${25+ ((scale + (window.innerWidth/2)) ) /  45}%`;
-            }
-            
-             if(planets[i].getAttribute('value') == 'Earth'){
-                planets[i].style.height = `${25+ ((scale + (window.innerHeight/2)) ) / 40}%`;
-                planets[i].style.width = `${25+ ((scale + (window.innerWidth/2)) ) /  40}%`;
-            }
-            
-            if(planets[i].getAttribute('value') == 'Mars'){
-                planets[i].style.height = `${25+ ((scale + (window.innerHeight/2)) ) / 35}%`;
-                planets[i].style.width = `${25+ ((scale + (window.innerWidth/2)) ) /  35}%`;
-            }
-            
-            if(planets[i].getAttribute('value') == 'Jupiter'){
-                planets[i].style.height = `${25+ ((scale + (window.innerHeight/2)) ) /  30}%`;
-                planets[i].style.width = `${25+ ((scale + (window.innerWidth/2)) ) /  30}%`;
-            }
-            
-             if(planets[i].getAttribute('value') == 'Saturn'){
-                planets[i].style.height = `${25+ ((scale + (window.innerHeight/2)) ) / 20}%`;
-                planets[i].style.width = `${25+ ((scale + (window.innerWidth/2)) ) /  20}%`;
-            }
+        
           
         }
     }
