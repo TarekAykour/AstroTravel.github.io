@@ -41,8 +41,8 @@ for(let i =0; i < planets.length; i++){
             let scale = (parseFloat(perihelions[j].innerText) / (window.innerWidth + window.innerHeight) / 2)  / 500    ;
 
             //width, height of orbit
-            planets[i].style.height = `${25+ ((scale + (window.innerHeight/2)) ) /  50 }%`;
-            planets[i].style.width = `${ 25+ ((scale + (window.innerWidth /2) ) ) / 50  }%`;
+            planets[i].style.height = `${50+ ((scale + (window.innerHeight/2)) ) /  25 }%`;
+            planets[i].style.width = `${ 50+ ((scale + (window.innerWidth /2) ) ) / 25  }%`;
 
 
             if(planets[i].style.height > 100){
